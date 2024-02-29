@@ -23,7 +23,7 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 public class NewFilter implements Filter {
     
-    private static final boolean debug = true;
+    private static final boolean DEBUG = true;
 
     // The filter configuration object we are associated with.  If
     // this value is null, this filter instance is not currently
@@ -35,7 +35,7 @@ public class NewFilter implements Filter {
     
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
-        if (debug) {
+        if (DEBUG) {
             log("NewFilter:DoBeforeProcessing");
         }
 
@@ -63,7 +63,7 @@ public class NewFilter implements Filter {
     
     private void doAfterProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
-        if (debug) {
+        if (DEBUG) {
             log("NewFilter:DoAfterProcessing");
         }
 
@@ -99,7 +99,7 @@ public class NewFilter implements Filter {
             FilterChain chain)
             throws IOException, ServletException {
         
-        if (debug) {
+        if (DEBUG) {
             log("NewFilter:doFilter()");
         }
         
@@ -167,7 +167,7 @@ public class NewFilter implements Filter {
     public void init(FilterConfig filterConfig) {        
         this.filterConfig = filterConfig;
         if (filterConfig != null) {
-            if (debug) {                
+            if (DEBUG) {                
                 log("NewFilter:Initializing filter");
             }
         }
