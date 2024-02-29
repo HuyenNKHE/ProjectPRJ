@@ -123,8 +123,9 @@ public class DAO extends DBContext{
             ps.setInt(1, Cid);
             rs = ps.executeQuery();
             if (rs.next()) {
-                Category c=new Category(rs.getInt("cid"),
-                        rs.getString("cname"));
+                Category c=new Category();
+                c.setCid(rs.getInt("cid"));
+                c.setCname(rs.getString("cname"));
                 return c;
             }
         } catch (Exception e) {
