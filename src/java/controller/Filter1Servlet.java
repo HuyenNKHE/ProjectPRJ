@@ -110,7 +110,8 @@ public class Filter1Servlet extends HttpServlet {
 
                 for (int i = 0; i < price.length; i++) {
 
-                    List<Product> temp = new ArrayList<>();
+                    List<Product> temp;
+                     
 
                     if (price[i].equals("0")) {
                         from = 0;
