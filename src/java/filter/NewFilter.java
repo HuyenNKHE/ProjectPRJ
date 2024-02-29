@@ -30,8 +30,6 @@ public class NewFilter implements Filter {
     // configured. 
     private FilterConfig filterConfig = null;
     
-    public NewFilter() {
-    }    
     
     private void doBeforeProcessing(ServletRequest request, ServletResponse response)
             throws IOException, ServletException {
@@ -158,9 +156,7 @@ public class NewFilter implements Filter {
     /**
      * Destroy method for this filter
      */
-    public void destroy() {        
-    }
-
+   
     /**
      * Init method for this filter
      */
