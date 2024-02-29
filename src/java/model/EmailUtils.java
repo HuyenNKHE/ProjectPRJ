@@ -14,6 +14,9 @@ import javax.mail.internet.MimeMessage;
 import model.Email;
 
 public class EmailUtils {
+	public EmailUtils (){
+		
+	}
 	public static void send(Email email) 
 			throws Exception {
 		Properties prop = new Properties();
